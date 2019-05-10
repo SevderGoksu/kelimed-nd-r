@@ -1,83 +1,892 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F5083E9E-A58A-4624-9848-4FB4D4CCC2FC}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>KelimeDondurme</RootNamespace>
-    <AssemblyName>KelimeDondurme</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-</Project>
+ private void btnCevir_Click(object sender, EventArgs e)
+        {
+            string kelime = txtKelime.Text;
+            char[] dizi = kelime.ToArray();
+            int sayi = kelime.Count();
+            string terskelime = "";
+
+            if (sayi > 0 && sayi <= 10)
+            {
+                if (sayi == 10)
+                {
+                    terskelime = dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 9)
+                {
+                    terskelime = dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 8)
+                {
+                    terskelime = dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 7)
+                {
+                    terskelime = dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 6)
+                {
+                    terskelime = dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 5)
+                {
+                    terskelime = dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 4)
+                {
+                    terskelime = dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 3)
+                {
+                    terskelime = dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 2)
+                {
+                    terskelime = dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 1)
+                {
+                    terskelime = dizi[0].ToString();
+                }
+            }
+            if (sayi > 10 && sayi <= 20)
+            {
+                if (sayi == 20)
+                {
+                    terskelime = dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 19)
+                {
+                    terskelime = dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 18)
+                {
+                    terskelime = dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 17)
+                {
+                    terskelime = dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 16)
+                {
+                    terskelime = dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 15)
+                {
+                    terskelime = dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 14)
+                {
+                    terskelime = dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 13)
+                {
+                    terskelime = dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 12)
+                {
+                    terskelime = dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 11)
+                {
+                    terskelime = dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+            }
+            if (sayi > 20 && sayi <= 30)
+            {
+                if (sayi == 30)
+                {
+                    terskelime = dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 29)
+                {
+                    terskelime = dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 28)
+                {
+                    terskelime = dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 27)
+                {
+                    terskelime = dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 26)
+                {
+                    terskelime = dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 25)
+                {
+                    terskelime = dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 24)
+                {
+                    terskelime = dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 23)
+                {
+                    terskelime = dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 22)
+                {
+                    terskelime = dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 21)
+                {
+                    terskelime = dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+            }
+            if (sayi > 30 && sayi <= 40)
+            {
+                if (sayi == 40)
+                {
+                    terskelime = dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 39)
+                {
+                    terskelime = dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 38)
+                {
+                    terskelime = dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 37)
+                {
+                    terskelime = dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 36)
+                {
+                    terskelime = dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 35)
+                {
+                    terskelime = dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 34)
+                {
+                    terskelime = dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 33)
+                {
+                    terskelime = dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 32)
+                {
+                    terskelime = dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 31)
+                {
+                    terskelime = dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+            }
+            if (sayi > 40 && sayi <= 50)
+            {
+                if (sayi == 50)
+                {
+                    terskelime = dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 49)
+                {
+                    terskelime = dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 48)
+                {
+                    terskelime = dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 47)
+                {
+                    terskelime = dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 46)
+                {
+                    terskelime = dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 45)
+                {
+                    terskelime = dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 44)
+                {
+                    terskelime = dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 43)
+                {
+                    terskelime = dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 42)
+                {
+                    terskelime = dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 41)
+                {
+                    terskelime = dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+            }
+            if (sayi > 50 && sayi <= 60)
+            {
+                if (sayi == 60)
+                {
+                    terskelime = dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 59)
+                {
+                    terskelime = dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 58)
+                {
+                    terskelime = dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 57)
+                {
+                    terskelime = dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 56)
+                {
+                    terskelime = dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 55)
+                {
+                    terskelime = dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 54)
+                {
+                    terskelime = dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 53)
+                {
+                    terskelime = dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 52)
+                {
+                    terskelime = dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 51)
+                {
+                    terskelime = dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+            }
+            if (sayi > 60 && sayi <= 70)
+            {
+                if (sayi == 70)
+                {
+                    terskelime = dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 69)
+                {
+                    terskelime = dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 68)
+                {
+                    terskelime = dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 67)
+                {
+                    terskelime = dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 66)
+                {
+                    terskelime = dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 65)
+                {
+                    terskelime = dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 64)
+                {
+                    terskelime = dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 63)
+                {
+                    terskelime = dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 62)
+                {
+                    terskelime = dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 61)
+                {
+                    terskelime = dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+            }
+            if (sayi > 70 && sayi <= 80)
+            {
+                if (sayi == 80)
+                {
+                    terskelime = dizi[79].ToString() + dizi[78].ToString() + dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 79)
+                {
+                    terskelime = dizi[78].ToString() + dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 78)
+                {
+                    terskelime = dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 77)
+                {
+                    terskelime = dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 76)
+                {
+                    terskelime = dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 75)
+                {
+                    terskelime = dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 74)
+                {
+                    terskelime = dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 73)
+                {
+                    terskelime = dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 72)
+                {
+                    terskelime = dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 71)
+                {
+                    terskelime = dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+            }
+            if (sayi > 80 && sayi <= 90)
+            {
+                if (sayi == 90)
+                {
+                    terskelime =
+                                 dizi[89].ToString() + dizi[88].ToString() + dizi[87].ToString() + dizi[86].ToString() + dizi[85].ToString() + dizi[84].ToString() + dizi[83].ToString() + dizi[82].ToString() + dizi[81].ToString() + dizi[80].ToString() +
+                                 dizi[79].ToString() + dizi[78].ToString() + dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 89)
+                {
+                    terskelime = dizi[88].ToString() + dizi[87].ToString() + dizi[86].ToString() + dizi[85].ToString() + dizi[84].ToString() + dizi[83].ToString() + dizi[82].ToString() + dizi[81].ToString() + dizi[80].ToString() +
+                                 dizi[79].ToString() + dizi[78].ToString() + dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 88)
+                {
+                    terskelime = dizi[87].ToString() + dizi[86].ToString() + dizi[85].ToString() + dizi[84].ToString() + dizi[83].ToString() + dizi[82].ToString() + dizi[81].ToString() + dizi[80].ToString() +
+                                 dizi[79].ToString() + dizi[78].ToString() + dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 87)
+                {
+                    terskelime = dizi[86].ToString() + dizi[85].ToString() + dizi[84].ToString() + dizi[83].ToString() + dizi[82].ToString() + dizi[81].ToString() + dizi[80].ToString() +
+                                 dizi[79].ToString() + dizi[78].ToString() + dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 86)
+                {
+                    terskelime = dizi[85].ToString() + dizi[84].ToString() + dizi[83].ToString() + dizi[82].ToString() + dizi[81].ToString() + dizi[80].ToString() +
+                                 dizi[79].ToString() + dizi[78].ToString() + dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 85)
+                {
+                    terskelime = dizi[84].ToString() + dizi[83].ToString() + dizi[82].ToString() + dizi[81].ToString() + dizi[80].ToString() +
+                                 dizi[79].ToString() + dizi[78].ToString() + dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 84)
+                {
+                    terskelime = dizi[83].ToString() + dizi[82].ToString() + dizi[81].ToString() + dizi[80].ToString() +
+                                 dizi[79].ToString() + dizi[78].ToString() + dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 83)
+                {
+                    terskelime = dizi[82].ToString() + dizi[81].ToString() + dizi[80].ToString() +
+                                 dizi[79].ToString() + dizi[78].ToString() + dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 82)
+                {
+                    terskelime = dizi[81].ToString() + dizi[80].ToString() +
+                                 dizi[79].ToString() + dizi[78].ToString() + dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 81)
+                {
+                    terskelime = dizi[80].ToString() +
+                                 dizi[79].ToString() + dizi[78].ToString() + dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+            }
+            if (sayi > 90 && sayi <= 100)
+            {
+                if (sayi == 100)
+                {
+                    terskelime = dizi[99].ToString() + dizi[98].ToString() + dizi[97].ToString() + dizi[96].ToString() + dizi[95].ToString() + dizi[94].ToString() + dizi[93].ToString() + dizi[92].ToString() + dizi[91].ToString() + dizi[90].ToString() +
+                                 dizi[89].ToString() + dizi[88].ToString() + dizi[87].ToString() + dizi[86].ToString() + dizi[85].ToString() + dizi[84].ToString() + dizi[83].ToString() + dizi[82].ToString() + dizi[81].ToString() + dizi[80].ToString() +
+                                 dizi[79].ToString() + dizi[78].ToString() + dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 99)
+                {
+                    terskelime = dizi[98].ToString() + dizi[97].ToString() + dizi[96].ToString() + dizi[95].ToString() + dizi[94].ToString() + dizi[93].ToString() + dizi[92].ToString() + dizi[91].ToString() + dizi[90].ToString() +
+                                 dizi[89].ToString() + dizi[88].ToString() + dizi[87].ToString() + dizi[86].ToString() + dizi[85].ToString() + dizi[84].ToString() + dizi[83].ToString() + dizi[82].ToString() + dizi[81].ToString() + dizi[80].ToString() +
+                                 dizi[79].ToString() + dizi[78].ToString() + dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 98)
+                {
+                    terskelime = dizi[97].ToString() + dizi[96].ToString() + dizi[95].ToString() + dizi[94].ToString() + dizi[93].ToString() + dizi[92].ToString() + dizi[91].ToString() + dizi[90].ToString() +
+                                 dizi[89].ToString() + dizi[88].ToString() + dizi[87].ToString() + dizi[86].ToString() + dizi[85].ToString() + dizi[84].ToString() + dizi[83].ToString() + dizi[82].ToString() + dizi[81].ToString() + dizi[80].ToString() +
+                                 dizi[79].ToString() + dizi[78].ToString() + dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 97)
+                {
+                    terskelime = dizi[96].ToString() + dizi[95].ToString() + dizi[94].ToString() + dizi[93].ToString() + dizi[92].ToString() + dizi[91].ToString() + dizi[90].ToString() +
+                                 dizi[89].ToString() + dizi[88].ToString() + dizi[87].ToString() + dizi[86].ToString() + dizi[85].ToString() + dizi[84].ToString() + dizi[83].ToString() + dizi[82].ToString() + dizi[81].ToString() + dizi[80].ToString() +
+                                 dizi[79].ToString() + dizi[78].ToString() + dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 96)
+                {
+                    terskelime = dizi[95].ToString() + dizi[94].ToString() + dizi[93].ToString() + dizi[92].ToString() + dizi[91].ToString() + dizi[90].ToString() +
+                                 dizi[89].ToString() + dizi[88].ToString() + dizi[87].ToString() + dizi[86].ToString() + dizi[85].ToString() + dizi[84].ToString() + dizi[83].ToString() + dizi[82].ToString() + dizi[81].ToString() + dizi[80].ToString() +
+                                 dizi[79].ToString() + dizi[78].ToString() + dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 95)
+                {
+                    terskelime = dizi[94].ToString() + dizi[93].ToString() + dizi[92].ToString() + dizi[91].ToString() + dizi[90].ToString() +
+                                 dizi[89].ToString() + dizi[88].ToString() + dizi[87].ToString() + dizi[86].ToString() + dizi[85].ToString() + dizi[84].ToString() + dizi[83].ToString() + dizi[82].ToString() + dizi[81].ToString() + dizi[80].ToString() +
+                                 dizi[79].ToString() + dizi[78].ToString() + dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 94)
+                {
+                    terskelime = dizi[93].ToString() + dizi[92].ToString() + dizi[91].ToString() + dizi[90].ToString() +
+                                 dizi[89].ToString() + dizi[88].ToString() + dizi[87].ToString() + dizi[86].ToString() + dizi[85].ToString() + dizi[84].ToString() + dizi[83].ToString() + dizi[82].ToString() + dizi[81].ToString() + dizi[80].ToString() +
+                                 dizi[79].ToString() + dizi[78].ToString() + dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 93)
+                {
+                    terskelime = dizi[93].ToString() + dizi[92].ToString() + dizi[91].ToString() + dizi[90].ToString() +
+                                 dizi[89].ToString() + dizi[88].ToString() + dizi[87].ToString() + dizi[86].ToString() + dizi[85].ToString() + dizi[84].ToString() + dizi[83].ToString() + dizi[82].ToString() + dizi[81].ToString() + dizi[80].ToString() +
+                                 dizi[79].ToString() + dizi[78].ToString() + dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 92)
+                {
+                    terskelime = dizi[91].ToString() + dizi[90].ToString() +
+                                 dizi[89].ToString() + dizi[88].ToString() + dizi[87].ToString() + dizi[86].ToString() + dizi[85].ToString() + dizi[84].ToString() + dizi[83].ToString() + dizi[82].ToString() + dizi[81].ToString() + dizi[80].ToString() +
+                                 dizi[79].ToString() + dizi[78].ToString() + dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+                if (sayi == 91)
+                {
+                    terskelime = dizi[90].ToString() +
+                                 dizi[89].ToString() + dizi[88].ToString() + dizi[87].ToString() + dizi[86].ToString() + dizi[85].ToString() + dizi[84].ToString() + dizi[83].ToString() + dizi[82].ToString() + dizi[81].ToString() + dizi[80].ToString() +
+                                 dizi[79].ToString() + dizi[78].ToString() + dizi[77].ToString() + dizi[76].ToString() + dizi[75].ToString() + dizi[74].ToString() + dizi[73].ToString() + dizi[72].ToString() + dizi[71].ToString() + dizi[70].ToString() +
+                                 dizi[69].ToString() + dizi[68].ToString() + dizi[67].ToString() + dizi[66].ToString() + dizi[65].ToString() + dizi[64].ToString() + dizi[63].ToString() + dizi[62].ToString() + dizi[61].ToString() + dizi[60].ToString() +
+                                 dizi[59].ToString() + dizi[58].ToString() + dizi[57].ToString() + dizi[56].ToString() + dizi[55].ToString() + dizi[54].ToString() + dizi[53].ToString() + dizi[52].ToString() + dizi[51].ToString() + dizi[50].ToString() +
+                                 dizi[49].ToString() + dizi[48].ToString() + dizi[47].ToString() + dizi[46].ToString() + dizi[45].ToString() + dizi[44].ToString() + dizi[43].ToString() + dizi[42].ToString() + dizi[41].ToString() + dizi[40].ToString() +
+                                 dizi[39].ToString() + dizi[38].ToString() + dizi[37].ToString() + dizi[36].ToString() + dizi[35].ToString() + dizi[34].ToString() + dizi[33].ToString() + dizi[32].ToString() + dizi[31].ToString() + dizi[30].ToString() +
+                                 dizi[29].ToString() + dizi[28].ToString() + dizi[27].ToString() + dizi[26].ToString() + dizi[25].ToString() + dizi[24].ToString() + dizi[23].ToString() + dizi[22].ToString() + dizi[21].ToString() + dizi[20].ToString() +
+                                 dizi[19].ToString() + dizi[18].ToString() + dizi[17].ToString() + dizi[16].ToString() + dizi[15].ToString() + dizi[14].ToString() + dizi[13].ToString() + dizi[12].ToString() + dizi[11].ToString() + dizi[10].ToString() +
+                                 dizi[9].ToString() + dizi[8].ToString() + dizi[7].ToString() + dizi[6].ToString() + dizi[5].ToString() + dizi[4].ToString() + dizi[3].ToString() + dizi[2].ToString() + dizi[1].ToString() + dizi[0].ToString();
+                }
+            }
+
+
+            lstCevir.Items.Add(terskelime);
+        }
